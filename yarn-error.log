@@ -1,0 +1,49 @@
+Arguments: 
+  /home/paulomaster/.nvm/versions/node/v12.16.2/bin/node /usr/local/bin/yarn install
+
+PATH: 
+  /home/paulomaster/.nvm/versions/node/v12.16.2/bin:/home/paulomaster/.zplugin/polaris/bin:/home/paulomaster/bin:/home/paulomaster/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/emulator:/tools:/tools/bin:/platform-tools:/home/paulomaster/Android/Sdk/emulator:/home/paulomaster/Android/Sdk/tools:/home/paulomaster/Android/Sdk/tools/bin:/home/paulomaster/Android/Sdk/platform-tools:/home/paulomaster/.yarn/bin:/home/paulomaster/Android/Sdk/emulator:/home/paulomaster/Android/Sdk/tools:/home/paulomaster/Android/Sdk/tools/bin:/home/paulomaster/Android/Sdk/platform-tools:/home/paulomaster/.yarn/bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  12.16.2
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/paulomaster/www/summit-hack/package.json: Unexpected token } in JSON at position 374
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:304:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "nlw",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "dev": "nodemon src/server.js"
+    },
+    "author": "paulodevsilva <silva.paulohr@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+      "morgan": "^1.10.0",
+      "nodemon": "^2.0.4"
+    },
+    "dependencies": {
+      "body-parser": "^1.19.0",
+      "express": "^4.17.1",
+      "nunjucks": "^3.2.1",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

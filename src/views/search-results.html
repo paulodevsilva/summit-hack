@@ -1,0 +1,66 @@
+{% extends "layout.html" %} {% set pageId = "page-search-results" %} {% block
+title %}
+<title>Resultado da Pesquisa</title>
+{% endblock title %} {% block styles %}
+<link rel="stylesheet" href="/styles/search-results.css" />
+{% endblock styles %} {% block content %} {% include "partials/header.html" %}
+<main>
+  {% if total > 0 %}
+  <h4>
+    <strong>{{ total }} produtos</strong> encontrados na categoria
+    <strong>{{ data.offer}}</strong> para o cep <strong>{{ data.cep}}</strong>
+  </h4>
+
+  <div class="cards">
+    <div class="card">
+      <img src="{{ results.image[0] }}" alt="{{ results.name[0] }}" />
+      <h1>{{ results.name[0] }}</h1>
+      <h3>R$ {{ results.price[0] }}</h3>
+      <h3>12x de {{ results.price[0]}}</h3>
+      <button class="btn"><a href="/checkout">Comprar</a></button>
+      <p>Frete R$ {{ results.shipping[0] }}</p>
+    </div>
+
+    <div class="card">
+      <img src="{{ results.image[1] }}" alt="{{ results.name[1] }}" />
+      <h1>{{ results.name[1] }}</h1>
+      <h3>R$ {{ results.price[1] }}</h3>
+      <h3>12x de {{ results.price[1]}}</h3>
+      <button class="btn"><a href="/checkout">Comprar</a></button>
+      <p>Frete R$ {{ results.shipping[1] }}</p>
+    </div>
+
+    <div class="card">
+      <img src="{{ results.image[2] }}" alt="{{ results.name[2] }}" />
+      <h1>{{ results.name[2] }}</h1>
+      <h3>R$ {{ results.price[2] }}</h3>
+      <h3>12x de {{ results.price[2]}}</h3>
+      <button class="btn"><a href="/checkout">Comprar</a></button>
+      <p>Frete R$ {{ results.shipping[2] }}</p>
+    </div>
+    <div class="card">
+      <img src="{{ results.image[3] }}" alt="{{ results.name[3] }}" />
+      <h1>{{ results.name[3] }}</h1>
+      <h3>R$ {{ results.price[3] }}</h3>
+      <h3>12x de {{ results.price[3]}}</h3>
+      <button class="btn"><a href="/checkout">Comprar</a></button>
+      <p>Frete R$ {{ results.shipping[3] }}</p>
+    </div>
+    <div class="card">
+      <img src="{{ results.image[4] }}" alt="{{ results.name[4] }}" />
+      <h1>{{ results.name[4] }}</h1>
+      <h3>R$ {{ results.price[4] }}</h3>
+      <h3>12x de {{ results.price[4]}}</h3>
+      <button class="btn"><a href="/checkout">Comprar</a></button>
+      <p>Frete R$ {{ results.shipping[4] }}</p>
+    </div>
+    <!-- {% for result in results %} -->
+
+    <!-- {% endfor %} -->
+  </div>
+
+  {%else%}
+  <h4><strong>Nenhum</strong> local encontrado</h4>
+  {% endif %}
+</main>
+{% endblock content %}

@@ -1,0 +1,173 @@
+body {
+  background-color: #eb2a02;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+figure {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+figure:before,
+figure:after {
+  content: '';
+  height: 30%;
+  width: 20%;
+  top: 0;
+  left: 0%;
+  position: center;
+}
+
+/* .banner {
+  margin: 0 auto;
+} */
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .botao {
+  position: absolute;
+  top: 20px;
+  left: 30%;
+  margin: 0px;
+  background: #ffff00;
+  border: 1px solid #ffff00;
+  border-radius: 1000px;
+  padding: 12px 33px;
+  color: #ff0000;
+  display: inline-block;
+  font: normal bold 16px/1 'Open Sans', sans-serif;
+  text-align: center;
+  position: relative;
+} */
+
+.progresso {
+  text-align: center;
+  color: red;
+  font-family: Arial, sans-serif;
+  height: 18px;
+  width: 50%;
+  border-radius: 8px;
+  margin: 10px auto;
+  /* gradiente com 2 cores */
+  background-image: linear-gradient(to right, #ffff00 0, #ffff00 50%, gray 50%);
+  /* agradiente com 200% da largura do container 101% pra cada cor */
+  background-size: 202% 100%;
+  /* move o backgrount para mostrar apenas a primeira cor */
+  background-position: 99% 0;
+  /* animação que move o background para mostrar a segunda cor */
+  animation: anima 6s ease-in-out infinite;
+  /* coloquei 500ms de delay para vc poder ver a barra 100% "vazia" antes de iniciar a animação */
+}
+@keyframes anima {
+  0% {
+    /* movemo o background para mostrar apenas 100% de uma cor */
+    background-position: 99% 0;
+  }
+  /* do 0% do tempo da animação até 16,66% do tempo a barra permance parada */
+  16.66% {
+    background-position: 99% 0;
+  }
+  /* esse intervalo representa 4 segundos do tempo da animação até a barra fica 100% cheia */
+  83.34% {
+    background-position: 0 0;
+  }
+  /* esse intervalo de 83,34% a 100% representa 1 segundo da animação e a barra fica cheia por 1s antes de reiniciar*/
+  100% {
+    /* de 75% a 100% eu repito o estado da propriedade para vc ter um tempo de ver a barra 100% completa antes de reiniciar a animação */
+    background-position: 0 0;
+  }
+}
+
+/* #logo {
+  background-color: white;
+  height: 10px;
+  width: 100%;
+  display: left;
+  margin-left: 0;
+  margin-right: 0;
+} */
+
+.select-options {
+  position: relative;
+
+  background: #ffffff;
+  border: 1px solid #eb2a02;
+  border-radius: 0px;
+  padding: 10px 69px;
+  color: #cccccc;
+  display: inline-block;
+  font: normal normal 16px/1 'Open Sans', sans-serif;
+  text-align: left;
+}
+
+.btn {
+  background: #ffff00;
+  border: 1px solid #ffff00;
+  border-radius: 8px;
+  padding: 10px 69px;
+  color: #ff0000;
+  display: inline-block;
+  font: normal normal 16px/1 'Open Sans', sans-serif;
+  margin-left: 10px;
+}
+
+.btn-checkout {
+  background: #ffff00;
+  border: 1px solid #ffff00;
+  border-radius: 8px;
+  padding: 10px 69px;
+  color: #ff0000;
+  display: inline-block;
+  font: normal normal 16px/1 'Open Sans', sans-serif;
+  margin-left: 400px;
+  margin-bottom: 15px;
+  width: 500px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form input {
+  background-color: white;
+  border: 0;
+  width: 400px;
+  padding: 16px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+/* form button {
+  width: 400px;
+  height: 50px;
+  background-color: var(--primary-color);
+  border: 0;
+  border-radius: 8px 8px 8px 8px;
+} */
+
+form button:hover {
+  background-color: #2fb85e;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title>Persona - Protótipo Site Americanas</title>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Site protótipo construído para o hackaton summit com o objetivo de melhorar a logística da loja americanas."
+    />
+    <link rel="stylesheet" type="text/css" href="/styles/personastyle.css" />
+  </head>
+
+  <body>
+    <img class="logo" alt="Logo americanas" src="/assets/logoamericanas.jpg" />
+    <p align="center">
+      Selecionando as melhores ofertas baseadas para seu produto <br />e
+      localização de entrega.
+    </p>
+    <div class="progresso">Aguarde um instante...</div>
+  </body>
+  <script>
+    setTimeout(() => {
+      window.location = '/products?offer=Iphone+Xr&cep=60711-455';
+    }, 5000);
+  </script>
+</html>
